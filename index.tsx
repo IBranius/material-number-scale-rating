@@ -12,12 +12,11 @@ interface MaterialNumberScaleRatingParams {
     callBack: Function
 }
 
-export default function MaterialNumberScaleRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
-                                                      onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2, callBack
-                                                  } : MaterialNumberScaleRatingParams) {
+export  function MaterialNumberScaleRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
+                                               onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2, callBack
+                                           } : MaterialNumberScaleRatingParams) {
     const [current_index, setIndex] = useState(0);
-    // @ts-ignore
-    const array = (startIndex : number, endIndex : number) => Array(endIndex - startIndex + 1).fill().map((_, idx) => startIndex + idx);
+    const array = (startIndex : number, endIndex : number) => Array<number>(endIndex - startIndex + 1).fill(0).map((_, idx) => startIndex + idx);
 
     return (
         <div style={{
