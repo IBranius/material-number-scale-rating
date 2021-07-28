@@ -1,4 +1,4 @@
-# material-number-scale-rating
+# react-material-number-rating
 
 Light Preview (Based on parent component background color):
 
