@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import {Grid, Paper} from "@material-ui/core";
 
-export default function MaterialNumberRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
-                                          onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2, spacing = 1,
-                                          required = false, callBack}) {
+export default function MaterialNumberRating({ start, end, backgroundColor = "#FF2D5526", textColor = "#780017",
+                                                 onActiveBackgroundColor = "#FF2D55", onActiveTextColor = "#780017", padding = [15, 15, 0, 0], spacing = 1,
+                                                 required = false, borderRadius = 0, fontWeight = "bolder", fontSize = 20, mouseEnteredOn, clickedOn}) {
 
     const [current_index, setIndex] = useState(required ? 0 : -1);
     const array = [];
@@ -21,40 +21,30 @@ export default function MaterialNumberRating({ start, end, backgroundColor = "#F
         }}>
             <Grid container spacing={spacing}>
                 {numberRatingArray(start, end).map((a, index) => (
-                    <Grid item sm key={index}>
-                        {(current_index >= index) ? (
-                            <Paper
-                                style={{
-                                    textAlign: "center",
-                                    padding: padding,
-                                    backgroundColor: onActiveBackgroundColor,
-                                    color: onActiveTextColor,
-                                    cursor: "pointer"
-                                }}
-                                onMouseEnter={() => {
-                                    setIndex(index)
-                                    callBack(array[index])
-                                }}
-                            >
-                                {a}
-                            </Paper>
-                        ) : (
-                            <Paper
-                                style={{
-                                    textAlign: "center",
-                                    padding: padding,
-                                    backgroundColor: backgroundColor,
-                                    color: textColor,
-                                    cursor: "pointer"
-                                }}
-                                onMouseEnter={() => {
-                                    setIndex(index)
-                                    callBack(array[index])
-                                }}
-                            >
-                                {a}
-                            </Paper>
-                        )}
+                    <Grid item xs key={index}>
+                        <Paper
+                            style={{
+                                textAlign: "center",
+                                paddingTop: padding[0],
+                                paddingBottom: padding[1],
+                                paddingRight: padding[2],
+                                paddingLeft: padding[3],
+                                backgroundColor: (current_index >= index) ? onActiveBackgroundColor : backgroundColor,
+                                color: (current_index >= index) ? onActiveTextColor : textColor,
+                                cursor: "pointer",
+                                borderRadius: borderRadius,
+                                fontWeight: fontWeight,
+                                fontSize: fontSize
+
+                            }}
+                            onClick={() => clickedOn(array[index])}
+                            onMouseEnter={() => {
+                                setIndex(index)
+                                mouseEnteredOn(array[index])
+                            }}
+                        >
+                            {a}
+                        </Paper>
                     </Grid>
                 ))}
             </Grid>
