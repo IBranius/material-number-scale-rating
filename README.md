@@ -1,5 +1,9 @@
 # material-number-scale-rating
 
+Preview:
+
+![Material Number Rating](preview.png)
+
 To import the component:
 
 ```javascript
@@ -36,3 +40,11 @@ Pass this callback to MaterialNumberRating component like this:
 ```javascript
 <MaterialNumberRating start={1} end={10} callBack={callback}/>
 ```
+
+There are some optional properties for customization:
+1. backgroundColor : string 
+2. textColor : string
+3. onActiveBackgroundColor : string
+4. onActiveTextColor : string
+5. padding: number
+6. spacing: number
