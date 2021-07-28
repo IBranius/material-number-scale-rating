@@ -42,9 +42,12 @@ Pass this callback to MaterialNumberRating component like this:
 ```
 
 There are some optional properties for customization:
-1. backgroundColor : string 
-2. textColor : string
-3. onActiveBackgroundColor : string
-4. onActiveTextColor : string
-5. padding: number
-6. spacing: number
+
+```javascript
+backgroundColor : string 
+textColor : string
+onActiveBackgroundColor : string
+onActiveTextColor : string
+padding: number 
+spacing: number
+```
