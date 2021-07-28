@@ -35,7 +35,7 @@ const mouseEnteredOn = useCallback((current_rating) => {
 ```
 
 
-Pass this callback to **MaterialNumberRating** component like this:
+Pass this callback to _MaterialNumberRating_ component like this:
 
 ```javascript
 <MaterialNumberRating start={1} end={10} current={5} mouseEnteredOn={mouseEnteredOn} clickedOn={}/>
@@ -43,13 +43,15 @@ Pass this callback to **MaterialNumberRating** component like this:
 
 To Get which rating value clicked use React.useCallBack from parent component. Example:
 
+Parent component:
+
 ```javascript
 const clickedOn = useCallback((current_rating) => {
     console.log(current_rating);
 }, []);
 ```
 
-Pass this callback to **MaterialNumberRating** component like this:
+Pass this callback to _MaterialNumberRating_ component like this:
 
 ```javascript
 <MaterialNumberRating start={1} end={10} current={5} mouseEnteredOn={mouseEnteredOn} clickedOn={clickedOn}/>
