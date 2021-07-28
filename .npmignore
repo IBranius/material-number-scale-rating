@@ -1,5 +1,5 @@
 .babelrc
 webpack.config.js
 /.idea/
-preview.png
+*.png
 /src/

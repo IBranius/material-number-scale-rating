@@ -1,8 +1,12 @@
 # material-number-scale-rating
 
-Preview:
+Light Preview (Based on parent component background color):
 
 ![Material Number Rating](preview.png)
+
+Dark Preview (Based on parent component background color):
+
+![Material Number Rating](dark_preview.png)
 
 To import the component:
 
@@ -60,13 +64,14 @@ Pass this callback to _MaterialNumberRating_ component like this:
 There are some optional properties for customization:
 
 ```javascript
+itemPerGrid : string | number | bool //example = "auto" | 3 | true
 backgroundColor : string //example = "#FF2D5526"
 textColor : string //example = "#780017"
 onActiveBackgroundColor : string //example = "#FF2D55"
 onActiveTextColor : string //example = "#780017"
-padding<number>[paddingTop, paddingBottom, paddingRight, paddingLeft] //example = [15, 15, 0, 0]
+padding : [paddingTop, paddingBottom, paddingRight, paddingLeft] //example = [15, 15, 0, 0]
 spacing: number //example = 2
-borderRadius : number // example = 0
-fontWeight: string // example = "bolder"
-fontSize: number // example = 20
+borderRadius : number //example = 0
+fontWeight: string //example = "bolder"
+fontSize: number //example = 20
 ```
