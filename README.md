@@ -66,7 +66,6 @@ onActiveBackgroundColor : string //example = "#FF2D55"
 onActiveTextColor : string //example = "#780017"
 padding<number>[paddingTop, paddingBottom, paddingRight, paddingLeft] //example = [15, 15, 0, 0]
 spacing: number //example = 2
-required: bool // example = false
 borderRadius : number // example = 0
 fontWeight: string // example = "bolder"
 fontSize: number // example = 20
