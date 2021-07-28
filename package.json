@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "number rating scale as star rating for material component",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
     "start": "webpack— watch",
     "build": "webpack",
