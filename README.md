@@ -10,21 +10,21 @@ To import the component:
 import MaterialNumberRating from 'react-material-number-rating';
 ```
 
-To use it Call Component named:
+To use it call component named:
 
 ```javascript
-<MaterialNumberRating start={} end={} mouseEnteredOn={} clickedOn={}/>
+<MaterialNumberRating start={} end={} current={} mouseEnteredOn={} clickedOn={}/>
 ```
 
-Pass Rating Start and end Value. Example:
+Pass rating start, end, current value. Example:
 
 ```javascript
-<MaterialNumberRating start={1} end={10} mouseEnteredOn={} clickedOn={}/>
+<MaterialNumberRating start={1} end={10} current={5} mouseEnteredOn={} clickedOn={}/>
 ```
 
-To Get Rating Value use React.useCallBack from parent component. Example:
+To get rating value use React.useCallBack from parent component. Example:
 
-Parent Component:
+Parent component:
 
 ```javascript
 import { useCallback } from "react";
@@ -35,10 +35,10 @@ const mouseEnteredOn = useCallback((current_rating) => {
 ```
 
 
-Pass this callback to MaterialNumberRating component like this:
+Pass this callback to **MaterialNumberRating** component like this:
 
 ```javascript
-<MaterialNumberRating start={1} end={10} mouseEnteredOn={mouseEnteredOn} clickedOn={}/>
+<MaterialNumberRating start={1} end={10} current={5} mouseEnteredOn={mouseEnteredOn} clickedOn={}/>
 ```
 
 To Get which rating value clicked use React.useCallBack from parent component. Example:
@@ -49,10 +49,10 @@ const clickedOn = useCallback((current_rating) => {
 }, []);
 ```
 
-Pass this callback to MaterialNumberRating component like this:
+Pass this callback to **MaterialNumberRating** component like this:
 
 ```javascript
-<MaterialNumberRating start={1} end={10} mouseEnteredOn={mouseEnteredOn} clickedOn={clickedOn}/>
+<MaterialNumberRating start={1} end={10} current={5} mouseEnteredOn={mouseEnteredOn} clickedOn={clickedOn}/>
 ```
 
 There are some optional properties for customization:
