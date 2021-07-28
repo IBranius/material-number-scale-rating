@@ -1,6 +1,6 @@
 {
   "name": "react-material-number-rating",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "number rating scale as star rating for material component",
   "main": "dist/index.js",
   "module": "dist/index.js",
