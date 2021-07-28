@@ -1,9 +1,24 @@
 import React, {useState} from "react";
 import {Grid, Paper} from "@material-ui/core";
+import {arrayOf, func, number, string} from 'prop-types';
 
-export default function MaterialNumberRating({start, end, current, itemPerGrid= false, backgroundColor = "#FF2D5526", textColor = "#780017",
-                                                 onActiveBackgroundColor = "#FF2D55", onActiveTextColor = "#780017", padding = [15, 15, 0, 0], spacing = 1,
-                                                 borderRadius = 0, fontWeight = "bolder", fontSize = 20, mouseEnteredOn, clickedOn}) {
+const MaterialNumberRating = ({
+                    start,
+                    end,
+                    current,
+                    itemPerGrid = true,
+                    backgroundColor = "#FF2D5526",
+                    textColor = "#780017",
+                    onActiveBackgroundColor = "#FF2D55",
+                    onActiveTextColor = "#780017",
+                    padding = [15, 15, 0, 0],
+                    spacing = 1,
+                    borderRadius = 0,
+                    fontWeight = "bolder",
+                    fontSize = 20,
+                    mouseEnteredOn,
+                    clickedOn
+                }) => {
 
     const [current_index, setIndex] = useState(current - 1);
     const array = [];
@@ -50,4 +65,24 @@ export default function MaterialNumberRating({start, end, current, itemPerGrid= 
             </Grid>
         </div>
     );
+}
+
+export default MaterialNumberRating;
+
+MaterialNumberRating.propTypes = {
+    start : number.isRequired,
+    end : number.isRequired,
+    current: number.isRequired,
+    itemPerGrid: number,
+    backgroundColor: string,
+    textColor: string,
+    onActiveBackgroundColor: string,
+    onActiveTextColor: string,
+    padding: arrayOf(number),
+    spacing: number,
+    borderRadius: number,
+    fontWeight: string,
+    fontSize: number,
+    mouseEnteredOn: func.isRequired,
+    clickedOn: func.isRequired
 }

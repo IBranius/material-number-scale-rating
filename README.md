@@ -64,7 +64,7 @@ Pass this callback to _MaterialNumberRating_ component like this:
 There are some optional properties for customization:
 
 ```javascript
-itemPerGrid : string | number | bool //example = "auto" | 3 | true
+itemPerGrid : number //example = 3
 backgroundColor : string //example = "#FF2D5526"
 textColor : string //example = "#780017"
 onActiveBackgroundColor : string //example = "#FF2D55"
