@@ -1,22 +1,12 @@
-import {Grid, Paper} from "@material-ui/core";
 import React, {useState} from "react";
+import {Grid, Paper} from "@material-ui/core";
+import {number} from "prop-types";
 
-interface MaterialNumberScaleRatingParams {
-    start: number,
-    end: number,
-    backgroundColor?: string,
-    textColor?: string,
-    onActiveBackgroundColor?: string,
-    onActiveTextColor?: string,
-    padding?: number,
-    callBack: Function
-}
-
-export  function MaterialNumberScaleRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
+export default function MaterialNumberScaleRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
                                                onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2, callBack
-                                           } : MaterialNumberScaleRatingParams) {
+                                           }) {
     const [current_index, setIndex] = useState(0);
-    const array = (startIndex : number, endIndex : number) => Array<number>(endIndex - startIndex + 1).fill(0).map((_, idx) => startIndex + idx);
+    const array = (startIndex , endIndex) => Array<number>(endIndex - startIndex + 1).fill(0).map((_, idx) => startIndex + idx);
 
     return (
         <div style={{
