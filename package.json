@@ -1,6 +1,6 @@
 {
   "name": "material-number-scale-rating",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "number rating scale as star rating for material component",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/tamzid958/material-number-scale-rating"
   },
-  "author": "tamzid958 <tamjidahmed958@gmail.com>",
+  "author": "tamzid958 <tamjidahmed958@gmail.com> (https://mrtvirushub.com/)",
   "license": "ISC",
   "peerDependencies": {
     "react": "16.12.0",
@@ -27,7 +27,9 @@
     "@babel/preset-react": "7.7.4",
     "@material-ui/core": "4.12.2",
     "babel-loader": "8.0.6",
+    "bindings": "^1.5.0",
     "css-loader": "3.4.1",
+    "nan": "^2.14.2",
     "prop-types": "15.7.2",
     "react": "16.12.0",
     "style-loader": "1.1.2",
