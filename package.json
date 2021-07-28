@@ -16,8 +16,7 @@
   "author": "tamzid958 <tamjidahmed958@gmail.com> (https://mrtvirushub.com/)",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^17.0.2",
-    "@material-ui/core": "^4.12.2"
+    "react": "^17.0.2"
   },
   "devDependencies": {
     "@babel/cli": "7.7.7",
@@ -39,5 +38,7 @@
     "webpack-cli": "3.3.10",
     "webpack-node-externals": "^3.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@material-ui/core": "^4.12.2"
+  }
 }
