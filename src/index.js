@@ -44,7 +44,7 @@ onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2,
                                     color: textColor
                                 }}
                                 onMouseEnter={() => {
-                                    setIndex(index + 1)
+                                    setIndex(index)
                                     callBack(array[current_index])
                                 }}
                             >
