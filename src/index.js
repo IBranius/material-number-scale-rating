@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Grid, Paper} from "@material-ui/core";
 
-export  function MaterialNumberRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
+export default function MaterialNumberRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
                                           onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2, spacing = 1,
                                           required = false, callBack}) {
 
