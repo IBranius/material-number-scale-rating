@@ -30,7 +30,7 @@ onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2,
                                 }}
                                 onMouseEnter={() => {
                                     setIndex(index)
-                                    callBack(array[index])
+                                    callBack(array[current_index])
                                 }}
                             >
                                 {a}
@@ -45,7 +45,7 @@ onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2,
                                 }}
                                 onMouseEnter={() => {
                                     setIndex(index + 1)
-                                    callBack(array[index + 1])
+                                    callBack(array[current_index])
                                 }}
                             >
                                 {a}
