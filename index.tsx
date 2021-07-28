@@ -1,54 +1,65 @@
-import {createStyles, Grid, makeStyles, Paper, Theme} from "@material-ui/core";
-import { useState } from "react";
+import {Grid, Paper} from "@material-ui/core";
+import React, {useState} from "react";
 
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        root: {
-            flexGrow: 1,
-        },
-        paper: {
-            padding: theme.spacing(2),
-            textAlign: "center",
-            color: theme.palette.text.secondary
-        }
-    })
-)
+interface MaterialNumberScaleRatingParams {
+    start: number,
+    end: number,
+    backgroundColor?: string,
+    textColor?: string,
+    onActiveBackgroundColor?: string,
+    onActiveTextColor?: string,
+    padding?: number,
+    callBack: Function
+}
 
-export default function AutoGrid() {
+export default function MaterialNumberScaleRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
+                                                      onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2, callBack
+                                                  } : MaterialNumberScaleRatingParams) {
     const [current_index, setIndex] = useState(0);
-    const classes = useStyles();
-    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  
+    // @ts-ignore
+    const array = (startIndex : number, endIndex : number) => Array(endIndex - startIndex + 1).fill().map((_, idx) => startIndex + idx);
+
     return (
-      <div className={classes.root}>
-        <Grid container spacing={1}>
-          {array.map((a, index) => (
-            <Grid item sm key={index}>
-              {current_index > index ? (
-                <Paper
-                  className={classes.paper}
-                  style={{
-                    backgroundColor: "yellow"
-                  }}
-                  onMouseEnter={() => setIndex(index)}
-                >
-                  {a}
-                </Paper>
-              ) : (
-                <Paper
-                  className={classes.paper}
-                  style={{
-                    backgroundColor: "white"
-                  }}
-                  onMouseEnter={() => setIndex(index + 1)}
-                >
-                  {a}
-                </Paper>
-              )}
+        <div style={{
+            flexGrow: 1,
+        }}>
+            <Grid container spacing={1}>
+                {array(start, end).map((a, index) => (
+                    <Grid item sm key={index}>
+                        {current_index > index ? (
+                            <Paper
+                                style={{
+                                    textAlign: "center",
+                                    padding: padding,
+                                    backgroundColor: onActiveBackgroundColor,
+                                    color: onActiveTextColor
+                                }}
+                                onMouseEnter={() => {
+                                    setIndex(index)
+                                    callBack(index)
+                                }}
+                            >
+                                {a}
+                            </Paper>
+                        ) : (
+                            <Paper
+                                style={{
+                                    textAlign: "center",
+                                    padding: padding,
+                                    backgroundColor: backgroundColor,
+                                    color: textColor
+                                }}
+                                onMouseEnter={() => {
+                                    setIndex(index + 1)
+                                    callBack(index + 1)
+                                }}
+                            >
+                                {a}
+                            </Paper>
+                        )}
+                    </Grid>
+                ))}
             </Grid>
-          ))}
-        </Grid>
-      </div>
+        </div>
     );
 }
-  

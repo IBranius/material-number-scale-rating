@@ -6,9 +6,12 @@
   "scripts": {
     "test": "test.ts"
   },
-  "author": "Tamzid Ahmed",
+  "author": "tamzid958",
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.12.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
   }
 }
