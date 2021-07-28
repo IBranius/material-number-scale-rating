@@ -4,9 +4,9 @@ import {Grid, Paper} from "@material-ui/core";
 export default function MaterialNumberRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
 onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2, spacing = 1, callBack}) {
     const [current_index, setIndex] = useState(0);
+    const array = [];
 
     const numberRatingArray = (startIndex , endIndex) => {
-       let array = [];
         for (let i = startIndex; i <= endIndex; i++) {
             array.push(i);
         }
@@ -30,7 +30,7 @@ onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2,
                                 }}
                                 onMouseEnter={() => {
                                     setIndex(index)
-                                    callBack(index)
+                                    callBack(array[index])
                                 }}
                             >
                                 {a}
@@ -45,7 +45,7 @@ onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2,
                                 }}
                                 onMouseEnter={() => {
                                     setIndex(index + 1)
-                                    callBack(index + 1)
+                                    callBack(array[index + 1])
                                 }}
                             >
                                 {a}
