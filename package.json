@@ -1,0 +1,14 @@
+{
+  "name": "material-number-scale-rating",
+  "version": "1.0.0",
+  "description": "number rating scale as star rating for material component",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "test.ts"
+  },
+  "author": "Tamzid Ahmed",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.12.2"
+  }
+}
