@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {Grid, Paper} from "@material-ui/core";
-import {number} from "prop-types";
 
 export default function MaterialNumberRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
 onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2, callBack}) {
@@ -8,7 +7,7 @@ onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2,
 
     const numberRatingArray = (startIndex , endIndex) => {
        let array = [];
-        for (let i = startIndex; i < endIndex; i++) {
+        for (let i = startIndex; i <= endIndex; i++) {
             array.push(i);
         }
         return array;
