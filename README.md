@@ -1,15 +1,21 @@
 # material-number-scale-rating
 
+To import the component:
+
+```javascript
+import {MaterialNumberRating} from 'react-material-number-rating';
+```
+
 To use it Call Component named:
 
 ```javascript
-<MaterialNumberScaleRating start={} end={} callBack={}/>
+<MaterialNumberRating start={} end={} callBack={}/>
 ```
 
 Pass Rating Start and end Value. Example:
 
 ```javascript
-<MaterialNumberScaleRating start={1} end={10} callBack={}/>
+<MaterialNumberRating start={1} end={10} callBack={}/>
 ```
 
 To Get Rating Value use React.useCallBack from parent component. Example:
@@ -25,8 +31,8 @@ const callback = useCallback((count) => {
 ```
 
 
-Pass this callback to MaterialNumberScaleRating component like this:
+Pass this callback to MaterialNumberRating component like this:
 
 ```javascript
-<MaterialNumberScaleRating start={1} end={10} callBack={callback}/>
+<MaterialNumberRating start={1} end={10} callBack={callback}/>
 ```
