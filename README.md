@@ -50,4 +50,5 @@ onActiveBackgroundColor : string
 onActiveTextColor : string
 padding: number 
 spacing: number
+required: bool
 ```

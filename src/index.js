@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import {Grid, Paper} from "@material-ui/core";
 
-export default function MaterialNumberRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
-                                                 onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2, spacing = 1, callBack}) {
-    const [current_index, setIndex] = useState(0);
+export  function MaterialNumberRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
+                                          onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2, spacing = 1,
+                                          required = false, callBack}) {
+
+    const [current_index, setIndex] = useState(required ? 0 : -1);
     const array = [];
 
     const numberRatingArray = (startIndex , endIndex) => {
