@@ -28,7 +28,8 @@ export default function MaterialNumberRating({ start, end, backgroundColor = "#F
                                     textAlign: "center",
                                     padding: padding,
                                     backgroundColor: onActiveBackgroundColor,
-                                    color: onActiveTextColor
+                                    color: onActiveTextColor,
+                                    cursor: "pointer"
                                 }}
                                 onMouseEnter={() => {
                                     setIndex(index)
@@ -43,7 +44,8 @@ export default function MaterialNumberRating({ start, end, backgroundColor = "#F
                                     textAlign: "center",
                                     padding: padding,
                                     backgroundColor: backgroundColor,
-                                    color: textColor
+                                    color: textColor,
+                                    cursor: "pointer"
                                 }}
                                 onMouseEnter={() => {
                                     setIndex(index)

@@ -20,7 +20,7 @@
     "@material-ui/core": "^4.12.2"
   },
   "devDependencies": {
-    "@babel/cli": "7.7.7",
+    "@babel/cli": "^7.14.8",
     "@babel/core": "7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/preset-env": "7.7.7",
@@ -28,6 +28,7 @@
     "@material-ui/core": "^4.12.2",
     "babel-loader": "8.0.6",
     "bindings": "^1.5.0",
+    "commonjs2": "^1.0.0",
     "css-loader": "3.4.1",
     "nan": "^2.14.2",
     "prop-types": "15.7.2",
@@ -36,8 +37,7 @@
     "url-loader": "3.0.0",
     "webpack": "4.41.5",
     "webpack-cli": "3.3.10",
-    "webpack-node-externals": "^3.0.0",
-    "commonjs2": "^1.0.0"
+    "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {}
 }
