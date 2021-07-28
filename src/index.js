@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import {Grid, Paper} from "@material-ui/core";
 import {number} from "prop-types";
 
-export const MaterialNumberRating = ({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
-onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2, callBack}) =>  {
+export default function MaterialNumberRating({ start, end, backgroundColor = "#FFFFFF", textColor = "#000000",
+onActiveBackgroundColor = "#2196f3", onActiveTextColor = "#FFFFFF", padding = 2, callBack}) {
     const [current_index, setIndex] = useState(0);
     const array = (startIndex , endIndex) => Array<number>(endIndex - startIndex + 1).fill(0).map((_, idx) => startIndex + idx);
 

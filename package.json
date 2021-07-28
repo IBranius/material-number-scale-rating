@@ -16,7 +16,7 @@
   "author": "tamzid958 <tamjidahmed958@gmail.com> (https://mrtvirushub.com/)",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^17.0.2",
+    "react": "16.8.6",
     "@material-ui/core": "^4.12.2"
   },
   "devDependencies": {
@@ -31,13 +31,13 @@
     "css-loader": "3.4.1",
     "nan": "^2.14.2",
     "prop-types": "15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "16.8.6",
     "style-loader": "1.1.2",
     "url-loader": "3.0.0",
     "webpack": "4.41.5",
     "webpack-cli": "3.3.10",
-    "webpack-node-externals": "^3.0.0"
+    "webpack-node-externals": "^3.0.0",
+    "commonjs2": "^1.0.0"
   },
   "dependencies": {}
 }

@@ -3,7 +3,7 @@
 To import the component:
 
 ```javascript
-import {MaterialNumberRating} from 'react-material-number-rating';
+import MaterialNumberRating from 'react-material-number-rating';
 ```
 
 To use it Call Component named:
