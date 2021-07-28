@@ -6,6 +6,7 @@ const MaterialNumberRating = ({
                     start,
                     end,
                     current,
+                    gap = 1,
                     itemPerGrid = true,
                     backgroundColor = "#FF2D5526",
                     textColor = "#780017",
@@ -20,22 +21,24 @@ const MaterialNumberRating = ({
                     clickedOn
                 }) => {
 
-    const [current_index, setIndex] = useState(current - 1);
-    const array = [];
-
-    const numberRatingArray = (startIndex , endIndex) => {
-        for (let i = startIndex; i <= endIndex; i++) {
+    const getRatingArray = (startIndex , endIndex) => {
+        let array = [];
+        for (let i = startIndex; i <= endIndex; i += gap) {
             array.push(i);
         }
         return array;
     };
+
+    const preparedArray = getRatingArray(start, end);
+
+    const [current_index, setIndex] = useState(preparedArray.indexOf(current));
 
     return (
         <div style={{
             flexGrow: 1,
         }}>
             <Grid container spacing={spacing}>
-                {numberRatingArray(start, end).map((a, index) => (
+                {preparedArray.map((a, index) => (
                     <Grid item xs={itemPerGrid} key={index}>
                         <Paper
                             style={{
@@ -52,10 +55,10 @@ const MaterialNumberRating = ({
                                 fontSize: fontSize
 
                             }}
-                            onClick={() => clickedOn(array[index])}
+                            onClick={() => clickedOn(preparedArray[index])}
                             onMouseEnter={() => {
                                 setIndex(index)
-                                mouseEnteredOn(array[index])
+                                mouseEnteredOn(preparedArray[index])
                             }}
                         >
                             {a}
@@ -73,6 +76,7 @@ MaterialNumberRating.propTypes = {
     start : number.isRequired,
     end : number.isRequired,
     current: number.isRequired,
+    gap: number,
     itemPerGrid: number,
     backgroundColor: string,
     textColor: string,

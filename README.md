@@ -64,6 +64,7 @@ Pass this callback to _MaterialNumberRating_ component like this:
 There are some optional properties for customization:
 
 ```javascript
+gap : number //example = 2 gap between each numbers
 itemPerGrid : number //example = 3
 backgroundColor : string //example = "#FF2D5526"
 textColor : string //example = "#780017"
