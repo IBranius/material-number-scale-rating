@@ -1,13 +1,14 @@
 {
-  "name": "react-material-number-rating",
-  "version": "1.0.28",
+  "name": "@branius/react-material-number-rating",
+  "version": "1.0.0",
   "description": "number rating scale as star rating for material component",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
     "start": "webpack— watch",
     "build": "webpack",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
