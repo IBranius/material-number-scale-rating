@@ -2,11 +2,11 @@
 
 Light Preview (Based on parent component background color):
 
-![Material Number Rating](preview.png)
+![Material Number Rating](assets/preview.png)
 
 Dark Preview (Based on parent component background color):
 
-![Material Number Rating](dark_preview.png)
+![Material Number Rating](assets/dark_preview.png)
 
 To import the component:
 
