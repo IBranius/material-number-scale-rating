@@ -2,11 +2,11 @@
 
 Light Preview (Based on parent component background color):
 
-![Material Number Rating](assets/preview.png)
+![Material Number Rating](https://github.com/IBranius/material-number-scale-rating/blob/master/assets/preview.png?raw=true)
 
 Dark Preview (Based on parent component background color):
 
-![Material Number Rating](assets/dark_preview.png)
+![Material Number Rating](https://github.com/IBranius/material-number-scale-rating/blob/master/assets/dark_preview.png?raw=true)
 
 To import the component:
 
